@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convert"
+version = "0.1.0"
+description = "A small command-line tool that converts temperatures between Celsius and Fahrenheit."
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+convert = "convert.cli:main"
+
+[tool.setuptools]
+packages = ["convert"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
